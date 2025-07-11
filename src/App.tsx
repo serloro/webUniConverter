@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Calculator, Smartphone, Zap, Play, Github, ExternalLink, ChevronDown, DollarSign, Ruler, Package, Shirt, HardDrive, Atom, Music, Gamepad2, GraduationCap, Heart, Clock, Scale, Box, Monitor, Beaker, Headphones, Target, BookOpen, Activity } from 'lucide-react';
+import { Calculator, Smartphone, Zap, Github, ExternalLink, ChevronDown, DollarSign, Ruler, Package, Shirt, HardDrive, Atom, Music, Gamepad2, GraduationCap, Heart, Clock, Monitor } from 'lucide-react';
 import { useLanguage } from './contexts/LanguageContext';
 import LanguageToggle from './components/LanguageToggle';
 
 function App() {
   const { t } = useLanguage();
-  const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState({
     hero: true,
     categories: false,
@@ -14,12 +13,6 @@ function App() {
     tech: false,
     cta: false
   });
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
