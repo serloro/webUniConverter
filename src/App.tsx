@@ -330,7 +330,7 @@ function App() {
                         className={`flex items-center space-x-1 ${category.bgColor} rounded-lg px-2 py-1 group-hover:scale-105 transition-transform duration-200`}
                         style={{ transitionDelay: `${subIndex * 100}ms` }}
                       >
-                        <div className={`bg-gradient-to-r ${category.color} bg-clip-text text-transparent`}>
+                        <div className="text-slate-400 group-hover:text-white transition-colors">
                           {sub.icon}
                         </div>
                         <span className="text-xs text-slate-300 group-hover:text-white transition-colors">
