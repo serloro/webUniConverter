@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Calculator, Smartphone, Zap, Github, ExternalLink, ChevronDown, DollarSign, Ruler, Package, Shirt, HardDrive, Atom, Music, Gamepad2, GraduationCap, Heart, Clock, Monitor } from 'lucide-react';
+import { Calculator, Smartphone, Zap, Github, ExternalLink, ChevronDown, DollarSign, Ruler, Package, Shirt, HardDrive, Atom, Music, Gamepad2, GraduationCap, Heart, Clock, Monitor, Coins, Globe, CreditCard, Scale, Thermometer, Move, Box, Truck, Palette, Wifi, Database, Server, Zap as Lightning, Gauge, Headphones, Target, Trophy, MapPin, Activity, Dumbbell } from 'lucide-react';
 import { useLanguage } from './contexts/LanguageContext';
 import LanguageToggle from './components/LanguageToggle';
 
@@ -50,7 +50,12 @@ function App() {
       color: 'from-emerald-500 to-teal-600',
       bgColor: 'bg-emerald-500/10',
       borderColor: 'border-emerald-500/20',
-      delay: 'delay-100'
+      delay: 'delay-100',
+      subcategories: [
+        { icon: <Coins className="w-4 h-4" />, name: 'Currencies' },
+        { icon: <Globe className="w-4 h-4" />, name: 'Time zones' },
+        { icon: <CreditCard className="w-4 h-4" />, name: 'Loans' }
+      ]
     },
     {
       icon: <Ruler className="w-6 h-6" />,
@@ -59,7 +64,12 @@ function App() {
       color: 'from-blue-500 to-cyan-600',
       bgColor: 'bg-blue-500/10',
       borderColor: 'border-blue-500/20',
-      delay: 'delay-200'
+      delay: 'delay-200',
+      subcategories: [
+        { icon: <Move className="w-4 h-4" />, name: 'Length' },
+        { icon: <Scale className="w-4 h-4" />, name: 'Weight' },
+        { icon: <Thermometer className="w-4 h-4" />, name: 'Temperature' }
+      ]
     },
     {
       icon: <Package className="w-6 h-6" />,
@@ -68,7 +78,12 @@ function App() {
       color: 'from-amber-500 to-orange-600',
       bgColor: 'bg-amber-500/10',
       borderColor: 'border-amber-500/20',
-      delay: 'delay-300'
+      delay: 'delay-300',
+      subcategories: [
+        { icon: <Box className="w-4 h-4" />, name: 'Pieces' },
+        { icon: <Package className="w-4 h-4" />, name: 'Boxes' },
+        { icon: <Truck className="w-4 h-4" />, name: 'Pallets' }
+      ]
     },
     {
       icon: <Shirt className="w-6 h-6" />,
@@ -77,7 +92,12 @@ function App() {
       color: 'from-pink-500 to-rose-600',
       bgColor: 'bg-pink-500/10',
       borderColor: 'border-pink-500/20',
-      delay: 'delay-400'
+      delay: 'delay-400',
+      subcategories: [
+        { icon: <Shirt className="w-4 h-4" />, name: 'Clothing' },
+        { icon: <Palette className="w-4 h-4" />, name: 'Shoes' },
+        { icon: <Heart className="w-4 h-4" />, name: 'Rings' }
+      ]
     },
     {
       icon: <Monitor className="w-6 h-6" />,
@@ -86,7 +106,12 @@ function App() {
       color: 'from-purple-500 to-violet-600',
       bgColor: 'bg-purple-500/10',
       borderColor: 'border-purple-500/20',
-      delay: 'delay-500'
+      delay: 'delay-500',
+      subcategories: [
+        { icon: <Database className="w-4 h-4" />, name: 'Data' },
+        { icon: <Wifi className="w-4 h-4" />, name: 'Networks' },
+        { icon: <Server className="w-4 h-4" />, name: 'Systems' }
+      ]
     },
     {
       icon: <Atom className="w-6 h-6" />,
@@ -95,7 +120,12 @@ function App() {
       color: 'from-indigo-500 to-blue-600',
       bgColor: 'bg-indigo-500/10',
       borderColor: 'border-indigo-500/20',
-      delay: 'delay-600'
+      delay: 'delay-600',
+      subcategories: [
+        { icon: <Lightning className="w-4 h-4" />, name: 'Energy' },
+        { icon: <Zap className="w-4 h-4" />, name: 'Force' },
+        { icon: <Gauge className="w-4 h-4" />, name: 'Pressure' }
+      ]
     },
     {
       icon: <Music className="w-6 h-6" />,
@@ -104,7 +134,12 @@ function App() {
       color: 'from-green-500 to-emerald-600',
       bgColor: 'bg-green-500/10',
       borderColor: 'border-green-500/20',
-      delay: 'delay-700'
+      delay: 'delay-700',
+      subcategories: [
+        { icon: <Music className="w-4 h-4" />, name: 'Notes' },
+        { icon: <Headphones className="w-4 h-4" />, name: 'Frequencies' },
+        { icon: <Activity className="w-4 h-4" />, name: 'BPM' }
+      ]
     },
     {
       icon: <Gamepad2 className="w-6 h-6" />,
@@ -113,7 +148,12 @@ function App() {
       color: 'from-red-500 to-pink-600',
       bgColor: 'bg-red-500/10',
       borderColor: 'border-red-500/20',
-      delay: 'delay-800'
+      delay: 'delay-800',
+      subcategories: [
+        { icon: <Target className="w-4 h-4" />, name: 'DPI' },
+        { icon: <Monitor className="w-4 h-4" />, name: 'FPS' },
+        { icon: <Zap className="w-4 h-4" />, name: 'Performance' }
+      ]
     },
     {
       icon: <GraduationCap className="w-6 h-6" />,
@@ -122,7 +162,12 @@ function App() {
       color: 'from-yellow-500 to-amber-600',
       bgColor: 'bg-yellow-500/10',
       borderColor: 'border-yellow-500/20',
-      delay: 'delay-900'
+      delay: 'delay-900',
+      subcategories: [
+        { icon: <Trophy className="w-4 h-4" />, name: 'Grades' },
+        { icon: <GraduationCap className="w-4 h-4" />, name: 'Credits' },
+        { icon: <MapPin className="w-4 h-4" />, name: 'Coordinates' }
+      ]
     },
     {
       icon: <Heart className="w-6 h-6" />,
@@ -131,7 +176,12 @@ function App() {
       color: 'from-rose-500 to-red-600',
       bgColor: 'bg-rose-500/10',
       borderColor: 'border-rose-500/20',
-      delay: 'delay-1000'
+      delay: 'delay-1000',
+      subcategories: [
+        { icon: <Scale className="w-4 h-4" />, name: 'BMI' },
+        { icon: <Zap className="w-4 h-4" />, name: 'Calories' },
+        { icon: <Activity className="w-4 h-4" />, name: 'Heart rate' }
+      ]
     }
   ];
 
@@ -268,14 +318,33 @@ function App() {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
                     {category.title}
                   </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors">
+                  
+                  {/* Subcategorías con iconos */}
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {category.subcategories.map((sub, subIndex) => (
+                      <div 
+                        key={subIndex}
+                        className={`flex items-center space-x-1 ${category.bgColor} rounded-lg px-2 py-1 group-hover:scale-105 transition-transform duration-200`}
+                        style={{ transitionDelay: `${subIndex * 100}ms` }}
+                      >
+                        <div className={`bg-gradient-to-r ${category.color} bg-clip-text text-transparent`}>
+                          {sub.icon}
+                        </div>
+                        <span className="text-xs text-slate-300 group-hover:text-white transition-colors">
+                          {sub.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors mb-4">
                     {category.description}
                   </p>
                   
-                  <div className="mt-4 flex items-center text-slate-500 group-hover:text-blue-400 transition-colors">
+                  <div className="flex items-center text-slate-500 group-hover:text-blue-400 transition-colors">
                     <span className="text-xs font-medium">{t('categories.tap_to_convert')}</span>
                     <ChevronDown className="w-4 h-4 ml-2 rotate-[-90deg] group-hover:translate-x-1 transition-transform" />
                   </div>
