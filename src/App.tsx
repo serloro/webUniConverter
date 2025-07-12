@@ -313,7 +313,7 @@ function App() {
                 
                 <div className="relative z-10">
                   <div className={`inline-flex items-center justify-center w-12 h-12 ${category.bgColor} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <div className={`bg-gradient-to-r ${category.color} bg-clip-text text-transparent`}>
+                    <div className="text-slate-300 group-hover:text-white transition-colors">
                       {category.icon}
                     </div>
                   </div>
