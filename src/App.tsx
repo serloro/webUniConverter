@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Calculator, Smartphone, Zap, Github, ExternalLink, ChevronDown, DollarSign, Ruler, Package, Shirt, HardDrive, Atom, Music, Gamepad2, GraduationCap, Heart, Clock, Monitor, Coins, Globe, CreditCard, Scale, Thermometer, Move, Box, Truck, Palette, Wifi, Database, Server, Zap as Lightning, Gauge, Headphones, Target, Trophy, MapPin, Activity, Dumbbell } from 'lucide-react';
+import { Calculator, Smartphone, Zap, Github, ExternalLink, ChevronDown, DollarSign, Ruler, Package, Shirt, HardDrive, Atom, Music, Gamepad2, GraduationCap, Heart, Clock, Monitor, Coins, Globe, CreditCard, Scale, Thermometer, Move, Box, Truck, Palette, Wifi, Database, Server, Zap as Lightning, Gauge, Headphones, Target, Trophy, MapPin, Activity } from 'lucide-react';
 import { useLanguage } from './contexts/LanguageContext';
 import LanguageToggle from './components/LanguageToggle';
 
